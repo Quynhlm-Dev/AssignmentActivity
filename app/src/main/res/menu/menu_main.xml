@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/so_luong"
+        android:title="Số Lượng Nhân Viên"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/dang_xuat"
+        android:title="Đăng Xuất" />
+    <item
+        android:id="@+id/menu_search"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@drawable/baseline_search_24"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/them_moi"
+        android:icon="@drawable/add"
+        android:title="Themmoi"
+        app:showAsAction="always" />
+</menu>

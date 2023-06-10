@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightpurple"
+    tools:context=".Activity_Dang_Nhap">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/top_tight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624"
+        tools:layout_editor_absoluteX="25dp">
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="30sp"
+            android:text="Login"
+            android:textColor="#8B008B"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/name"
+            android:drawablePadding="@dimen/padding_10dp"
+            android:hint="Username"
+            android:textColor="@color/purple"
+            android:textColorHint="#8B008B"/>
+
+        <EditText
+            android:id="@+id/edtPassWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="@dimen/padding_10dp"
+            android:hint="PassWord"
+            android:inputType="textPassword"
+            android:textColor="@color/purple"
+            android:textColorHint="#8B008B" />
+
+        <CheckBox
+            android:id="@+id/chk_remember"
+            android:text="Remember me"
+            android:textColor="@color/purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btndangnhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/backgroudbutton"
+            android:backgroundTint="@color/purple"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_big_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/bodervuong"
+                android:drawableRight="@drawable/facebook"
+                android:gravity="center"
+                android:padding="@dimen/padding_10dp"
+                android:text="Facebook"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_size_20" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bodervuong"
+                android:drawableRight="@drawable/google"
+                android:gravity="center"
+                android:padding="@dimen/padding_10dp"
+                android:text="Google"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_size_20" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtdangky"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:text="Are you new user? Regiuter"
+            android:textColor="@color/purple" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
