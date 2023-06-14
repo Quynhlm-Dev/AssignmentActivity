@@ -33,6 +33,7 @@
             android:text="" />
 
         <TextView
+            android:id="@+id/txtwel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-light"
@@ -42,6 +43,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/txtpoly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"

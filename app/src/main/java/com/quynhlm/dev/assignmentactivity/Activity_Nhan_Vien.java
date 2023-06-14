@@ -56,6 +56,7 @@ public class Activity_Nhan_Vien extends AppCompatActivity {
                         }
 
                         list.add(new Nhan_Vien_Model(img, ID, name, phongban, gioitinh));
+                        ghiFile_NV();
                         fill();
                     }
                 }
@@ -76,10 +77,10 @@ public class Activity_Nhan_Vien extends AppCompatActivity {
         listView = findViewById(R.id.lview);
         btnThemMoi = findViewById(R.id.btnthem);
         list = new ArrayList<>();
-        list.add(new Nhan_Vien_Model(R.drawable.profile, "NV1", "Lê Mạnh Quỳnh", "Đào tạo", "Nam"));
-        list.add(new Nhan_Vien_Model(R.drawable.profile_nu, "NV2", "Tống Doanh Chính ", "Nhân viên", "Nữ"));
-        list.add(new Nhan_Vien_Model(R.drawable.profile, "NV3", "Lê Văn Đức", "Nhân sự", "Nam"));
-        list.add(new Nhan_Vien_Model(R.drawable.profile_nu, "NV4", "Bùi Thị Thảo", "Nhân viên", "Nữ"));
+        list.add(new Nhan_Vien_Model(R.drawable.profile, "NV01", "Lê Mạnh Quỳnh", "Đào tạo", "Nam"));
+        list.add(new Nhan_Vien_Model(R.drawable.profile_nu, "NV02", "Tống Doanh Chính ", "Nhân viên", "Nữ"));
+        list.add(new Nhan_Vien_Model(R.drawable.profile, "NV03", "Lê Văn Đức", "Nhân sự", "Nam"));
+        list.add(new Nhan_Vien_Model(R.drawable.profile_nu, "NV04", "Bùi Thị Thảo", "Nhân viên", "Nữ"));
 
         fill();
 
@@ -179,11 +180,13 @@ public class Activity_Nhan_Vien extends AppCompatActivity {
                         } else {
                             img = R.drawable.profile_nu;
                         }
+
                         nvModel.setImglogo(img);
                         nvModel.setId(ID);
                         nvModel.setName(name);
                         nvModel.setPhongBan(phongban);
                         nvModel.setGioiTinh(gioitinh);
+                        ghiFile_NV();
                         fill();
                     }
                 }

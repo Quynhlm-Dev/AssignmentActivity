@@ -75,12 +75,6 @@ public class Activity_add_or_update extends AppCompatActivity {
 
                 if (name.trim().equals("") && id.trim().equals("") && phongBan.trim().equals("")) {
                     Toast.makeText(Activity_add_or_update.this, "Chua nhap du dinh dang form", Toast.LENGTH_SHORT).show();
-                } else if (!isChuoi(name)) {
-                    Toast.makeText(Activity_add_or_update.this, "Nhap sai dinh dang ten", Toast.LENGTH_SHORT).show();
-                } else if (!isChuoi(phongBan)) {
-                    Toast.makeText(Activity_add_or_update.this, "Nhap sai dinh dang phong ban", Toast.LENGTH_SHORT).show();
-                } else if (!isChuoi(id)) {
-                    Toast.makeText(Activity_add_or_update.this, "Nhap sai dinh dang id", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent();
                     intent.putExtra(KEY_NAME, name);

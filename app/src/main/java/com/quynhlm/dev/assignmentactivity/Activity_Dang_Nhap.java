@@ -68,34 +68,21 @@ public class Activity_Dang_Nhap extends AppCompatActivity {
         setContentView(R.layout.activity_dang_nhap);
 
         minMap();
-
-        chk_remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (chk_remember.isChecked()) {
-                    String username = edtname.getText().toString();
-                    String password = edtpass.getText().toString();
-                    SharedPreferences data = getSharedPreferences("abc", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = data.edit();
-                    editor.putString("username", username);
-                    editor.putString("password", password);
-                    editor.apply();
-                }
-            }
-        });
+        docShared();
+        DocFile();
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 username = edtname.getText().toString();
                 password = edtpass.getText().toString();
-                DocFile();
                 if (username.trim().equals("") && password.trim().equals("")) {
                     Toast.makeText(Activity_Dang_Nhap.this, "Chưa nhập đủ thông tin", Toast.LENGTH_SHORT).show();
-                }else if(!isChuoi(username)){
+                } else if (!isChuoi(username)) {
                     Toast.makeText(Activity_Dang_Nhap.this, "Nhap sai dinh dang", Toast.LENGTH_SHORT).show();
                 } else if (username.equals(username_dk) && password.equals(password_dk)) {
                     Intent intent = new Intent(Activity_Dang_Nhap.this, Acticity_Trang_Chu.class);
                     startActivity(intent);
+                    ghiShared();
                     Toast.makeText(Activity_Dang_Nhap.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(Activity_Dang_Nhap.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
@@ -128,5 +115,23 @@ public class Activity_Dang_Nhap extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    private void ghiShared() {
+        if (chk_remember.isChecked()) {
+            String usernameShared = edtname.getText().toString();
+            String passwordShared = edtpass.getText().toString();
+            SharedPreferences data = getSharedPreferences("abc", MODE_PRIVATE);
+            SharedPreferences.Editor editor = data.edit();
+            editor.putString("username", usernameShared);
+            editor.putString("password", passwordShared);
+            editor.apply();
+        }
+    }
+    private void docShared() {
+        SharedPreferences sharedPreferences = getSharedPreferences("abc", MODE_PRIVATE);
+        String savedUsername = sharedPreferences.getString("username", "");
+        String savedPassword = sharedPreferences.getString("password", "");
+        edtname.setText(savedUsername);
+        edtpass.setText(savedPassword);
     }
 }

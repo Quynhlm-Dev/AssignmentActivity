@@ -59,7 +59,6 @@ public class Acticity_Trang_Chu extends AppCompatActivity {
                 builder.setPositiveButton("Thoát", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        finish();
                     }
                 });
                 builder.setNegativeButton("Hủy", null);
